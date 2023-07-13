@@ -1,0 +1,41 @@
+---
+// Layouts
+import Head from './Head.astro'
+
+// Props
+export interface Props {
+  windowTitle?: string
+}
+
+const { windowTitle } = Astro.props
+---
+
+<script>
+  if (
+    localStorage.theme === 'dark' ||
+    (!('theme' in localStorage) &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches)
+  ) {
+    document.documentElement.classList.add('dark')
+  } else {
+    document.documentElement.classList.remove('dark')
+  }
+</script>
+
+<html lang='es-VE'>
+  <Head windowTitle={windowTitle}>
+    <slot name='head' />
+  </Head>
+  <body
+    class={`
+    h-screen
+    w-full
+    bg-white
+    text-black
+    dark:bg-dub-dark-bg
+    dark:text-white
+  `}
+  >
+    <slot />
+  </body>
+</html>

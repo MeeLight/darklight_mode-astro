@@ -1,0 +1,8 @@
+{
+  "editor.fontSize": 20,
+  "editor.tabSize": 2,
+  "files.autoSave": "onFocusChange",
+  "editor.fontLigatures": true,
+  "editor.minimap.enabled": false,
+  "markdown.preview.fontSize": 20,
+}

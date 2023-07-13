@@ -1,0 +1,28 @@
+---
+// Interfaces
+
+// Layouts
+import Layout from '@layouts/Layout.astro'
+
+// Common Components
+import Main from '@common/Main'
+
+// Components
+import Title from '@components/Title'
+import ToggleThemeButton from '@components/ToggleThemeButton'
+---
+
+<Layout windowTitle={import.meta.env.PUBLIC_TITLE}>
+  <Main
+    className={`
+    h-max
+    w-max
+    my-6
+    mx-6
+  `}
+  >
+    <Title>{import.meta.env.PUBLIC_TITLE ?? 'DarkLight Mode - App'}</Title>
+
+    <ToggleThemeButton client:only='react' />
+  </Main>
+</Layout>

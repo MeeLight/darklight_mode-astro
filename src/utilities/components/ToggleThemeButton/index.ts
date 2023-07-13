@@ -1,0 +1,1 @@
+export { onToggleTheme } from './onToggleTheme'

@@ -1,0 +1,23 @@
+---
+// Props
+export interface Props {
+  windowTitle?: string
+}
+
+const { windowTitle } = Astro.props
+---
+
+<head>
+  <meta http-equiv='Content-Type' content='text/html;charset=utf-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <meta name='author' content='Moises Reyes' />
+  <meta name='description' content='Dark and Light mode - App' />
+  <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+  <link rel='apple-touch-icon' href='/favicon.svg' />
+  <link rel='manifest' href='/manifest.json' />
+  <meta name='generator' content={Astro.generator} />
+  <title>
+    {windowTitle ? `${windowTitle}` : 'DarkLight Mode - App'}
+  </title>
+  <slot />
+</head>

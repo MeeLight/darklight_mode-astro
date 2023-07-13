@@ -1,0 +1,11 @@
+.vscode
+dist
+node_modules
+.editorconfig
+.gitignore
+.prettierrc
+package.json
+tsconfig.json
+README.md
+yarn.lock
+src/env.d.ts
