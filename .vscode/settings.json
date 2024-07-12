@@ -4,5 +4,5 @@
   "files.autoSave": "onFocusChange",
   "editor.fontLigatures": true,
   "editor.minimap.enabled": false,
-  "markdown.preview.fontSize": 20,
+  "markdown.preview.fontSize": 20
 }
